@@ -13,7 +13,7 @@ jobs:
   if_merged:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-    steps:
+    steps: # Correctly indenting this block
       - uses: actions/checkout@v3
       - uses: jakejarvis/s3-sync-action@v3
         with:
