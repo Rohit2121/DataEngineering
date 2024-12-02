@@ -3,7 +3,7 @@ name: Upload Website
 on:
   pull_request:
     branches: main
-    paths: 'so5_airflow/SO5_DEV_DBT/dags/*.py
+    paths: 'dags/*.py
     types : closed
 jobs:
   if_merged:
