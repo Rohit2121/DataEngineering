@@ -1,14 +1,15 @@
 name: Upload Website
 
 on:
-  push:
-    branches:
-    - main
-
+  pull_request:
+    branches: main
+    paths: 'dags/*.py'
+    types : closed
 jobs:
-  deploy:
+  if_merged:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-    steps:
+  steps:
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
       with:
