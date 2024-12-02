@@ -1,4 +1,4 @@
-name: Upload Website
+name: Dags
 
 on:
   pull_request:
